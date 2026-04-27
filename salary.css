@@ -1,0 +1,159 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    color: #334155; 
+}
+.logo span { 
+    color: #7b58c4; ; 
+}
+
+.logout-btn {
+    background: #f1ecff;
+    color: #7b58c4;     
+    border: 1px solid transparent;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.logout-btn:hover {
+    background: #e5dfff;
+    border-color: #d1c6fe;
+}
+.container{
+    max-width: 1300px;
+    margin:  32px auto;
+    padding: 20px;
+}
+.salary-form{
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 32px;
+    border: 1px solid #7b58c4;
+}
+h3{
+    margin-bottom: 35px;
+    font-size: 1.2rem;
+    color: #553354;
+}
+.grid-inputs{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+label{
+    margin-bottom: 5px;
+    color: #3c4756;
+    font-size: 17px;
+    font-weight: 600;
+}
+.input-form{
+    width: 100%;
+    padding: 10px 17px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.input-form:focus{
+    border-color:#7b58c4;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(123, 88, 196, 0.1);
+}
+.form-actions{
+    margin-top: 32px;
+    display: flex;
+    gap: 20px;
+}
+.btn{
+    background: #9072d1;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 250px;
+}
+.btn:hover {
+    background-color:#7b58c4;
+    color: #e2e8f0;
+}
+.btn-outline {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+        width: 250px;
+
+}
+.btn-outline:hover {
+    background-color:#f8fafc;
+    border-color: #b0bac9;
+    color: #64748b;
+    border-color: red;
+}
+.table-wrapper { 
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th {
+    text-align: left;
+    background: #f8fafc; 
+    padding: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.9rem;
+}
+
+tr:not(:first-child):hover { 
+    background-color: #f8fafc; 
+}
+
+.emp-name { font-weight: 600; color: #1e293b; }
+.penalty-val { color: #dc2626; } 
+.net-salary-val { 
+    font-weight: 700; 
+    color: #16a34a; 
+}

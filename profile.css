@@ -1,0 +1,230 @@
+.pageGrid {
+    display: grid;
+    grid-template-columns: 280px 1fr; 
+    min-height: calc(100vh - 70px); 
+    background-color: #f4f7fa;
+    overflow: hidden;
+}
+.sidebar{
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 15px;
+    text-align: center;
+height: 100%
+}
+.avatar{
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+.sidebar-name{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1e293b;
+}
+.sidebar-role{
+    font-size: 15px;
+color: #64748b;
+}
+.active-badge {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.main{
+    padding: 40px;
+    background-color: #f8fafc;
+}
+.summary-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.summary-card .card{
+    background-color: white;
+    border: 1px solid #64748b;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.summary-card .card:hover {
+    transform: translateY(-5px);
+}
+.label {
+    color: #a855f7;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+.value sub {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    bottom: 0;
+}
+.card:last-child .value {
+    color: #22c55e;
+}
+
+.net {
+    background: linear-gradient(135deg, #421a3c 0%, #8d419e 100%); /* لون كحلي فاخر */
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.net-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.net-sub {
+    font-size: 0.85rem;
+    color: #d9dee5; 
+    font-weight: 400;
+}
+
+.net-amount {
+    display: flex;
+    align-items: baseline; 
+    gap: 8px;
+}
+
+.netVal {
+    font-size: 3rem; 
+    font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(to bottom, #ffffff, #cbd5e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.netCurrency {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d4d5e5; 
+    text-transform: uppercase;
+}
+.details-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+}
+.details-card h5 {
+    color: #8d419e;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+.text-purple { color: #8b5cf6; font-weight: 600; }
+.text-green { color: #10b981; font-weight: 600; }
+.text-red { color: #ef4444; font-weight: 600; }
+@media (max-width: 991.98px) {
+    .pageGrid {
+        grid-template-columns: 1fr; 
+        height: auto; 
+        overflow: visible;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 20px;
+        height: auto;
+    }
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .main {
+        padding: 20px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .summary-card {
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px;
+    }
+
+    .summary-card .card {
+        padding: 15px;
+    }
+
+    .summary-card .value {
+        font-size: 1.1rem;
+    }
+
+    .net {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px;
+    }
+
+    .netVal {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .summary-card {
+        grid-template-columns: 1fr; 
+    }
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logout-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
